@@ -1,0 +1,9 @@
+<center>
+
+  <h1>Merchants</h1>
+
+  <% @rails_eng_fac.all_merchants.each do |merchant| %>
+    <p><%= link_to merchant.name, "/merchants/#{merchant.id}" %></p>
+  <% end %>
+
+</center>
