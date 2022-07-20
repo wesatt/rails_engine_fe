@@ -1,4 +1,9 @@
 <center>
-  <h1><%= 'Merchants' %></h1>
+  <% merchant_id = params[:id] %>
+  <h1><%= @rails_eng_fac.merchant_find(merchant_id).name %> Items</h1>
+
+  <% @rails_eng_fac.merchant_items(merchant_id).each do |item| %>
+    <p><%= item.name %></p>
+  <% end %>
 
 </center>
