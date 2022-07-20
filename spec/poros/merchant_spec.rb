@@ -4,7 +4,13 @@ require 'rails_helper'
 
 RSpec.describe Merchant do
   it 'exists and has attributes' do
-    merchant = Merchant.new(id: 1, name: 'I am a merchant')
+    merchant_hash = {
+      id: 1,
+      attributes: {
+        name: 'I am a merchant'
+      }
+    }
+    merchant = Merchant.new(merchant_hash)
 
     expect(merchant).to be_a(Merchant)
     expect(merchant.id).to eq(1)

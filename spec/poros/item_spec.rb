@@ -4,7 +4,14 @@ require 'rails_helper'
 
 RSpec.describe Item do
   it 'exists and has attributes' do
-    item = Item.new(id: 4, name: 'I am an item', merchant_id: 1)
+    item_hash = {
+      id: 4,
+      attributes: {
+        name: 'I am an item',
+        merchant_id: 1
+      }
+    }
+    item = Item.new(item_hash)
 
     expect(item).to be_a(Item)
     expect(item.id).to eq(4)
