@@ -2,7 +2,7 @@
 
 require 'rails_helper'
 
-RSpec.describe 'Merchants Show View' do
+RSpec.describe 'Merchants Show View', type: :feature do
   describe 'User Story 1' do
     # As a visitor,
     # When I visit '/merchants'
